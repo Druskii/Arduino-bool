@@ -1,1 +1,31 @@
+/*
+created by Dru for the youtube channel Better_through_tech
+Dated 4/8/2025
+*/
+
+int led = A0;
+int button = A1;
+bool on = false;
+
+void setup(){
+
+  pinMode(led,OUTPUT);
+  pinMode(button,INPUT);
+  
+}
+
+
+void loop(){
+  
+  if(digitalRead(button) == HIGH){
+    on = !on;
+    delay(200);  
+  }
+  
+  if(on == true){
+    digitalWrite(led,HIGH);
+  }else{
+    digitalWrite(led,LOW);
+  }
+}
 
